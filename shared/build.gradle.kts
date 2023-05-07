@@ -3,6 +3,7 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 kotlin {
@@ -37,9 +38,14 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.activity:activity-compose:1.7.1")
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.10.0")
+                // Compose BOM
+                api(libs.androidx.compose.bom)
+                api(libs.androidx.activity.compose)
+                api(libs.androidx.appcompat)
+                api(libs.androidx.core.ktx)
+
+                // Koin
+                api(libs.koin.core)
             }
         }
         val iosX64Main by getting
@@ -56,7 +62,7 @@ kotlin {
 
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication.common"
+    namespace = "com.client.common"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
@@ -64,7 +70,6 @@ android {
 
     defaultConfig {
         minSdk = (findProperty("android.minSdk") as String).toInt()
-        targetSdk = (findProperty("android.targetSdk") as String).toInt()
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -72,5 +77,11 @@ android {
     }
     kotlin {
         jvmToolchain(11)
+    }
+
+    detekt {
+        config = files("$rootDir/config/config.yml")
+        buildUponDefaultConfig = true
+        autoCorrect = true
     }
 }
