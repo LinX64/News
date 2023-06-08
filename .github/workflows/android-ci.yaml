@@ -13,7 +13,7 @@ concurrency:
 jobs:
   check:
     name: Checks
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     timeout-minutes: 60
 
     steps:
@@ -41,7 +41,7 @@ jobs:
   unit-tests:
     needs: check
     name: Unit tests
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -62,7 +62,7 @@ jobs:
   androidTest:
     needs: check
     name: Instrumented tests
-    runs-on: self-hosted
+    runs-on: macOS-12
     strategy:
       matrix:
         device-config: [ "pixel6api31" ]
