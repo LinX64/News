@@ -8,14 +8,12 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
-
     steps:
       - uses: actions/checkout@v3
 
-      - name: Available devices
+      - name: List of Available devices
         run: xcrun simctl list devicetypes
 
       - name: Run tests
-        run: xcodebuild test -scheme PAX -destination 'platform=iOS Simulator,name=iPhone 14 Pro'
+        run: xcodebuild test -project iosApp/iosApp.xcodeproj -scheme PAX -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max'
