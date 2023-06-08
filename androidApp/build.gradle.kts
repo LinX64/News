@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.application")
     id("org.jetbrains.compose")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 kotlin {
@@ -28,11 +29,19 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlin {
         jvmToolchain(11)
+    }
+
+    detekt {
+        config = files("$rootDir/config/config.yml")
+        buildUponDefaultConfig = true
+        autoCorrect = true
     }
 }
