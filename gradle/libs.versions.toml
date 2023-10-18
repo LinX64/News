@@ -35,7 +35,7 @@ okhttp = "4.11.0"
 gson = "2.10.1"
 gsonConverter = "2.9.0"
 
-kotlin = "1.8.20"
+kotlin = "1.9.10"
 kotlinxCoroutines = "1.7.3"
 lottie = "6.0.0"
 detekt = "1.22.0"
