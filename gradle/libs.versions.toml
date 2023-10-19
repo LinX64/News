@@ -50,7 +50,7 @@ firebaseBom = "31.5.0"
 accompanist-permissions = "0.30.1"
 camera2 = "1.2.2"
 junit4 = "4.13.2"
-turbine = "0.12.3"
+turbine = "0.13.0"
 
 [libraries]
 accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }
