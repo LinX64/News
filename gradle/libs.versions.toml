@@ -38,7 +38,7 @@ gsonConverter = "2.9.0"
 
 kotlin = "1.9.10"
 kotlinxCoroutines = "1.7.3"
-lottie = "6.0.0"
+lottie = "6.1.0"
 detekt = "1.23.1"
 googleServices = "4.4.0"
 googleServicesLocation = "21.0.1"
