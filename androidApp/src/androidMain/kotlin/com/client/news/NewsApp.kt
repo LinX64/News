@@ -1,7 +1,7 @@
-package com.client.news.ui
+package com.client.news
 
 import android.app.Application
-import com.client.news.ui.di.appModule
+import di.appModule
 import org.koin.core.context.GlobalContext.startKoin
 
 class NewsApp : Application() {
@@ -14,7 +14,7 @@ class NewsApp : Application() {
 
     private fun initKoin() {
         startKoin {
-            modules(appModule)
+            // modules(appModule)
         }
     }
 }

@@ -38,6 +38,12 @@ kotlin {
                 @OptIn(ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
                 implementation(libs.jetbrains.atomicfu)
+
+                implementation(libs.koin.core)
+                implementation(libs.koin.compose)
+
+                implementation(libs.moko.core)
+                implementation(libs.moko.flow)
             }
         }
         val androidMain by getting {
@@ -54,7 +60,7 @@ kotlin {
                 api(libs.androidx.lifecycle.runtimeCompose)
 
                 // Koin
-                api(libs.koin.android)
+                implementation(libs.koin.android)
 
                 // Retrofit
                 api(libs.retrofit.core)

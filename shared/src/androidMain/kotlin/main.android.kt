@@ -1,6 +1,6 @@
-actual fun getPlatformName(): String = "Android"
+import androidx.compose.runtime.Composable
 
-/*@Composable
-fun MainView(viewModel: MainViewModel) {
-    NewsApp(viewModel = viewModel)
-}*/
+@Composable
+fun MainView() {
+    NewsApp()
+}

@@ -29,8 +29,10 @@ androidxWindowManager = "1.1.0"
 coil = "2.4.0"
 jetbrains-atomicfu = "0.22.0"
 koin = "3.5.0"
+koin-compose = "1.1.0"
 
 loggingInterceptor = "4.12.0"
+mokoMvvmVersion = "0.16.1"
 retrofit = "2.9.0"
 okhttp = "4.12.0"
 gson = "2.10.1"
@@ -87,6 +89,10 @@ androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
 androidx-compose-ui-unit = { group = "androidx.compose.ui", name = "ui-unit", version.ref = "androidxComposeUiUnit" }
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist-permissions" }
 
+# Moko
+moko-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mokoMvvmVersion" }
+moko-flow = { module = "dev.icerock.moko:mvvm-flow", version.ref = "mokoMvvmVersion" }
+
 # Retrofit
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 gson-core = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
@@ -111,7 +117,10 @@ androidx-tracing-ktx = { group = "androidx.tracing", name = "tracing-ktx", versi
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 
 # DI & testing
-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-compose"}
+
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
 
