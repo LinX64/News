@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.client.news.androidApp-mergeDebugResources-53:/values-v16/values-v16.xml",
+            "outputFile": "com.client.news.androidApp-mergeDebugResources-52:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/mohsen/.gradle/caches/transforms-3/ee6cd93134f357fd54fc4ecbafa73255/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/mohsen/.gradle/caches/transforms-3/55596b661be9acdf9494262730e2d5b5/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mohsen/.gradle/caches/transforms-3/7085948118c35fc191c72d327b7136b9/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/mohsen/.gradle/caches/transforms-3/7d4b402e4be4271a1fe0f5f55d6d2d9e/transformed/core-1.12.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

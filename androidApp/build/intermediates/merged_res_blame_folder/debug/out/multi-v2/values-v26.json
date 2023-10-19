@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.client.news.androidApp-mergeDebugResources-53:/values-v26/values-v26.xml",
+            "outputFile": "com.client.news.androidApp-mergeDebugResources-52:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/mohsen/.gradle/caches/transforms-3/ee6cd93134f357fd54fc4ecbafa73255/transformed/appcompat-1.6.1/res/values-v26/values-v26.xml",
+                    "source": "/Users/mohsen/.gradle/caches/transforms-3/55596b661be9acdf9494262730e2d5b5/transformed/appcompat-1.6.1/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
