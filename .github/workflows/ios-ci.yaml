@@ -16,4 +16,4 @@ jobs:
         run: xcrun simctl list devicetypes
 
       - name: Run tests
-        run: xcodebuild test -project iosApp/iosApp.xcodeproj -scheme iosApp -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max'
+        run: xcodebuild -workspace Noname.xcworkspace -scheme Noname -enableCodeCoverage YES build-for-testing
