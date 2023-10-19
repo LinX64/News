@@ -30,7 +30,7 @@ coil = "2.4.0"
 jetbrains-atomicfu = "0.22.0"
 koin = "3.1.2"
 
-loggingInterceptor = "4.11.0"
+loggingInterceptor = "4.12.0"
 retrofit = "2.9.0"
 okhttp = "4.12.0"
 gson = "2.10.1"
@@ -51,7 +51,6 @@ accompanist-permissions = "0.30.1"
 camera2 = "1.2.2"
 junit4 = "4.13.2"
 turbine = "0.12.3"
-atomicfu = "0.22.0"
 
 [libraries]
 accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }
@@ -60,7 +59,7 @@ accompanist-testharness = { group = "com.google.accompanist", name = "accompanis
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
 androidx-dataStore-core = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
 androidx-dataStore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidxDataStore" }
-atomicfu-0_17_3 = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "jetbrains-atomicfu" }
+jetbrains-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "jetbrains-atomicfu" }
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coil" }
 logging-interceptor-4_9_1 = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
@@ -115,8 +114,6 @@ turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
-
-atomicfu = { group = "org.jetbrains.kotlinx", name = "atomicfu", version.ref = "atomicfu" }
 
 # Gradle plugins
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }

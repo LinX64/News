@@ -37,7 +37,7 @@ kotlin {
                 implementation(compose.materialIconsExtended)
                 @OptIn(ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-                implementation(libs.atomicfu)
+                implementation(libs.jetbrains.atomicfu)
             }
         }
         val androidMain by getting {
