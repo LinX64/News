@@ -27,7 +27,7 @@ fun NewsApp(
     modifier: Modifier = Modifier
 ) {
     KoinApplication(application = {
-        modules(appModule)
+        modules(appModule())
     }) {
         MaterialTheme {
             val snackBarHostState = remember { SnackbarHostState() }

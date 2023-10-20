@@ -1,9 +1,11 @@
 package di
 
+import data.repository.MainRepositoryImpl
 import org.koin.dsl.module
 import ui.MainViewModel
 
-val appModule = module {
-    // single { MainRepositoryImpl(get()) }
-    viewModelDefinition { MainViewModel(get())}
+fun appModule() = module {
+    single { MainRepositoryImpl() }
+
+    viewModelDefinition { MainViewModel() }
 }
