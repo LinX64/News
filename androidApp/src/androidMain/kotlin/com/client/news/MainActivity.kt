@@ -1,6 +1,6 @@
 package com.client.news
 
-import NewsApp
+import ui.NewsApp
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity

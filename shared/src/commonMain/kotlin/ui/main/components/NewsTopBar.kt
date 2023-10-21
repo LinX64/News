@@ -1,4 +1,4 @@
-package ui.components
+package ui.main.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.CenterAlignedTopAppBar

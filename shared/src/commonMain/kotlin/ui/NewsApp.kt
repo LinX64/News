@@ -1,3 +1,5 @@
+package ui
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -15,19 +17,19 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import ui.components.NewsItem
-import ui.components.NewsTopBar
+import ui.main.components.NewsTopBar
 import di.appModule
+import di.networkModule
 import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
-import ui.MainViewModel
+import ui.main.MainScreen
 
 @Composable
 fun NewsApp(
     modifier: Modifier = Modifier
 ) {
     KoinApplication(application = {
-        modules(appModule())
+        modules(appModule, networkModule)
     }) {
         MaterialTheme {
             val snackBarHostState = remember { SnackbarHostState() }
@@ -40,31 +42,9 @@ fun NewsApp(
             ) {
                 Column(modifier = modifier.fillMaxSize()) {
                     NewsTopBar()
-                    MainContent()
+                    MainScreen()
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun MainContent(
-    viewModel: MainViewModel = koinInject()
-) {
-    val lazyListState = rememberLazyGridState()
-    LazyVerticalGrid(
-        modifier = Modifier.fillMaxWidth(),
-        state = lazyListState,
-        columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(
-            start = 12.dp,
-            top = 16.dp,
-            end = 12.dp,
-            bottom = 16.dp
-        ),
-    ) {
-        items(100) {
-            NewsItem()
         }
     }
 }

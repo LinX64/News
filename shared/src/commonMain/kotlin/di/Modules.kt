@@ -1,11 +1,21 @@
 package di
 
-import data.repository.MainRepositoryImpl
+import data.dataSource.NewsDataSource
+import data.dataSource.NewsDataSourceImpl
+import data.repository.NewsRepository
+import data.repository.NewsRepositoryImpl
+import io.ktor.client.HttpClient
 import org.koin.dsl.module
 import ui.MainViewModel
 
-fun appModule() = module {
-    single { MainRepositoryImpl() }
+val appModule = module {
+    viewModelDefinition { MainViewModel(get()) }
+}
 
-    viewModelDefinition { MainViewModel() }
+val networkModule = module {
+    factory { HttpClient() }
+    single<NewsDataSource> { NewsDataSourceImpl(get()) }
+
+    // Repository
+    single<NewsRepository> { NewsRepositoryImpl(get()) }
 }

@@ -2,6 +2,7 @@ import org.jetbrains.compose.ExperimentalComposeLibrary
 
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.serialization") version "1.9.0"
     kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.compose")
@@ -29,26 +30,27 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                // Compose
                 implementation(compose.material3)
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.ui)
                 implementation(compose.materialIconsExtended)
+
                 @OptIn(ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
                 implementation(libs.jetbrains.atomicfu)
 
                 implementation(libs.koin.core)
                 implementation(libs.koin.compose)
-
                 implementation(libs.moko.core)
                 implementation(libs.moko.flow)
+                implementation(libs.ktor.client.core)
+
+                implementation(libs.kotlinx.serialization.json)
             }
         }
         val androidMain by getting {
             dependencies {
-                // Compose
                 api(libs.androidx.activity.compose)
                 api(libs.androidx.appcompat)
                 api(libs.androidx.core.ktx)
@@ -59,16 +61,13 @@ kotlin {
                 api(libs.androidx.compose.runtime)
                 api(libs.androidx.lifecycle.runtimeCompose)
 
-                // Koin
                 implementation(libs.koin.android)
+                implementation(libs.retrofit.core)
+                implementation(libs.gson.converter)
+                implementation(libs.okhttp.logging)
+                implementation(libs.kotlinx.coroutines.android)
 
-                // Retrofit
-                api(libs.retrofit.core)
-                api(libs.gson.converter)
-                api(libs.okhttp.logging)
-
-                // Coroutines
-                api(libs.kotlinx.coroutines.android)
+                implementation(libs.ktor.client.okhttp)
             }
         }
         val iosX64Main by getting
@@ -79,6 +78,9 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
         }
     }
 }

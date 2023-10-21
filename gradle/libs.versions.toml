@@ -31,6 +31,8 @@ jetbrains-atomicfu = "0.22.0"
 koin = "3.5.0"
 koin-compose = "1.1.0"
 
+kotlinxSerializationJson = "1.6.0"
+ktorVersion = "2.3.5"
 loggingInterceptor = "4.12.0"
 mokoMvvmVersion = "0.16.1"
 retrofit = "2.9.0"
@@ -64,6 +66,10 @@ androidx-dataStore-preferences = { group = "androidx.datastore", name = "datasto
 jetbrains-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "jetbrains-atomicfu" }
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coil" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVersion" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorVersion" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVersion" }
 logging-interceptor-4_9_1 = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 mlKit-Text-Recognition = { group = "com.google.android.gms", name = "play-services-mlkit-text-recognition", version.ref = "mlKitTextRecognition" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
