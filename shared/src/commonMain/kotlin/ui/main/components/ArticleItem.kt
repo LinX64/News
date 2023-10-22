@@ -23,22 +23,21 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 internal fun ArticleItem(article: Article) {
     Card(
-        modifier = Modifier.fillMaxWidth()
-            .padding(8.dp),
+        modifier = Modifier.padding(8.dp)
+            .fillMaxWidth(),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 3.dp
         )
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize(),
-        ) {
-            Image(
-                modifier = Modifier.fillMaxWidth(),
-                painter = painterResource("compose.png"),
-                contentDescription = null
-            )
+        Image(
+            modifier = Modifier.fillMaxWidth(),
+            painter = painterResource("compose.png"),
+            contentDescription = null
+        )
 
+        Column(
+            modifier = Modifier.fillMaxSize(),
+        ) {
             Spacer(modifier = Modifier.height(5.dp))
 
             Column(modifier = Modifier.padding(16.dp)) {
@@ -51,7 +50,7 @@ internal fun ArticleItem(article: Article) {
                 Spacer(modifier = Modifier.padding(4.dp))
 
                 Text(
-                    text = article.description,
+                    text = article.description ?: "",
                     style = MaterialTheme.typography.bodySmall
                 )
             }

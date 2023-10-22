@@ -16,11 +16,11 @@ data class TopHeadlinesResponse(
 @Serializable
 data class Article(
     @SerialName("author")
-    val author: String,
+    val author: String? = null,
     @SerialName("content")
-    val content: String,
+    val content: String? = null,
     @SerialName("description")
-    val description: String,
+    val description: String? = null,
     @SerialName("publishedAt")
     val publishedAt: String,
     @SerialName("source")
@@ -30,13 +30,13 @@ data class Article(
     @SerialName("url")
     val url: String,
     @SerialName("urlToImage")
-    val urlToImage: String
+    val urlToImage: String? = null
 )
 
 @Serializable
 data class Source(
     @SerialName("id")
-    val id: String,
+    val id: String? = null,
     @SerialName("name")
     val name: String
 )
