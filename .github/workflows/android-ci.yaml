@@ -77,10 +77,15 @@ jobs:
       - name: Accepting Android licenses
         run: yes | "$ANDROID_HOME"/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
-      - name: Run instrumented tests with GMD
-        run: ./gradlew cleanManagedDevices --unused-only &&
-          ./gradlew ${{ matrix.device-config }}paxDebugAndroidTest -Dorg.gradle.workers.max=1
-          -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect"
+      - name: Run instrumentation tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          disable-animations: true
+          disk-size: 6000M
+          heap-size: 600M
+          script: ./gradlew connectedDemoDebugAndroidTest --daemon
 
       - name: Upload test reports
         if: always()
