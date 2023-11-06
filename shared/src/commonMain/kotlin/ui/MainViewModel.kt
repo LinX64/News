@@ -7,6 +7,7 @@ import data.model.Article
 import data.repository.NewsRepository
 import data.util.Sources
 import data.util.asResult
+import data.util.Result.*
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -21,9 +22,9 @@ class MainViewModel(
         .asResult()
         .map { result ->
             when (result) {
-                is data.util.Result.Loading -> TopHeadlinesState.Loading
-                is data.util.Result.Success -> TopHeadlinesState.Success(result.data.articles)
-                is data.util.Result.Error -> {
+                is Loading -> TopHeadlinesState.Loading
+                is Success -> TopHeadlinesState.Success(result.data.articles)
+                is Error -> {
                     TopHeadlinesState.Error(result.exception?.message ?: "Unknown error")
                 }
             }
