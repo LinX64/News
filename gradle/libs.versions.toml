@@ -27,7 +27,7 @@ androidxUiAutomator = "2.2.0"
 androidxWindowManager = "1.2.0"
 
 coil = "2.5.0"
-jetbrains-atomicfu = "0.23.0"
+jetbrains-atomicfu = "0.23.1"
 koin = "3.5.0"
 koin-compose = "1.1.0"
 
