@@ -2,7 +2,7 @@ import org.jetbrains.compose.ExperimentalComposeLibrary
 
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization") version "1.9.21"
+    kotlin("plugin.serialization") version "1.9.22"
     kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.compose")
