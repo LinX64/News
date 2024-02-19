@@ -44,7 +44,7 @@ kotlin = "1.9.22"
 kotlinxCoroutines = "1.7.3"
 lottie = "6.3.0"
 detekt = "1.23.4"
-googleServices = "4.4.0"
+googleServices = "4.4.1"
 googleServicesLocation = "21.0.1"
 firebase-crashlytics-gradle = "2.9.9"
 
