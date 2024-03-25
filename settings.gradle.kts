@@ -14,7 +14,7 @@ pluginManagement {
         val kotlinVersion = extra["kotlin.version"] as String
         val agpVersion = extra["agp.version"] as String
         val composeVersion = extra["compose.version"] as String
-        val detektVersion = "1.23.4"
+        val detektVersion = "1.23.6"
 
         kotlin("jvm").version(kotlinVersion)
         kotlin("multiplatform").version(kotlinVersion)
